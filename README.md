@@ -20,4 +20,4 @@ Wir benutzen für dieses Tutorial die Alles-in-Einem Version von Tyk.
 5) Überprüfen, dass das Dashboard ausgeführt wird
    - Diese URL im Browser eingeben: `127.0.0.1:3000`
    - Falls das nicht funktioniert, schau im dazugehörigen Docker Stack nach, ob der Dashboard Container ausgeführt wird
-   ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+   ![alt text](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Dashboard_Einschalten.jpg?raw=true)
