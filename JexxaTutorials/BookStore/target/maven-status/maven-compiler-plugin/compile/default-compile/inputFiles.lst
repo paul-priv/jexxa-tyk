@@ -1,0 +1,11 @@
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domain\businessexception\BookNotInStockException.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domainservice\IBookRepository.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domainservice\ReferenceLibrary.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\BookStore.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\applicationservice\BookStoreService.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domain\domainevent\BookSoldOut.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\infrastructure\drivenadapter\persistence\BookRepository.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domainservice\IDomainEventPublisher.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domain\valueobject\ISBN13.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\domain\aggregate\Book.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\BookStore\src\main\java\io\jexxa\tutorials\bookstore\infrastructure\drivenadapter\messaging\DomainEventPublisher.java

@@ -1,0 +1,11 @@
+io\jexxa\tutorials\bookstorej\domain\aggregate\Book.class
+io\jexxa\tutorials\bookstorej\domain\valueobject\ISBN13.class
+io\jexxa\tutorials\bookstorej\domain\businessexception\BookNotInStockException.class
+io\jexxa\tutorials\bookstorej\domain\domainevent\BookSoldOut.class
+io\jexxa\tutorials\bookstorej\infrastructure\drivenadapter\persistence\BookRepository.class
+io\jexxa\tutorials\bookstorej\domainservice\IDomainEventPublisher.class
+io\jexxa\tutorials\bookstorej\domainservice\ReferenceLibrary.class
+io\jexxa\tutorials\bookstorej\BookStoreJ.class
+io\jexxa\tutorials\bookstorej\domainservice\IBookRepository.class
+io\jexxa\tutorials\bookstorej\infrastructure\drivenadapter\messaging\DomainEventPublisher.class
+io\jexxa\tutorials\bookstorej\applicationservice\BookStoreService.class

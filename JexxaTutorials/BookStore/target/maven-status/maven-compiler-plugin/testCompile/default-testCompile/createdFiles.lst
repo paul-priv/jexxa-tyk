@@ -1,0 +1,3 @@
+io\jexxa\tutorials\bookstore\applicationservice\BookStoreServiceTest.class
+io\jexxa\tutorials\bookstore\domainservice\ReferenceLibraryTest.class
+io\jexxa\tutorials\bookstore\domain\valueobject\ISBN13Test.class

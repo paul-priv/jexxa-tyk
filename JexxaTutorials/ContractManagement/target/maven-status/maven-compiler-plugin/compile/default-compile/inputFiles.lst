@@ -1,0 +1,9 @@
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\domain\aggregate\Contract.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\domain\domainevent\ContractSigned.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\applicationservice\ContractService.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\domainservice\IDomainEventStore.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\infrastructure\drivenadapter\ContractRepository.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\infrastructure\drivenadapter\DomainEventStore.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\domainservice\IContractRepository.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\ContractManagement.java
+E:\Arbeit\API Gateway\Demo\JexxaTutorials\ContractManagement\src\main\java\io\jexxa\tutorials\contractmanagement\domain\valueobject\ContractNumber.java

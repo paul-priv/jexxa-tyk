@@ -1,0 +1,11 @@
+io\jexxa\tutorials\contractmanagement\domain\aggregate\Contract.class
+io\jexxa\tutorials\contractmanagement\infrastructure\drivenadapter\ContractRepository$ContractSchema.class
+io\jexxa\tutorials\contractmanagement\applicationservice\ContractService.class
+io\jexxa\tutorials\contractmanagement\infrastructure\drivenadapter\ContractRepository.class
+io\jexxa\tutorials\contractmanagement\infrastructure\drivenadapter\DomainEventStore$DomainEventSchema.class
+io\jexxa\tutorials\contractmanagement\domainservice\IDomainEventStore.class
+io\jexxa\tutorials\contractmanagement\domain\valueobject\ContractNumber.class
+io\jexxa\tutorials\contractmanagement\ContractManagement.class
+io\jexxa\tutorials\contractmanagement\domain\domainevent\ContractSigned.class
+io\jexxa\tutorials\contractmanagement\infrastructure\drivenadapter\DomainEventStore.class
+io\jexxa\tutorials\contractmanagement\domainservice\IContractRepository.class
