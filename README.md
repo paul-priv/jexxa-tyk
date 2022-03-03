@@ -75,4 +75,5 @@ Wir überprüfen die Funktionalität der Jexxa Kontexte wie in den Tutorials bes
 [BookStoreJ](https://github.com/repplix/JexxaTutorials/blob/main/BookStoreJ/README.md)
 
 Hierbei benutzen wir jedoch NICHT die IP Adresse und den Port auf dem der Kontext läuft, sondern die vom API Gateway: `localhost:8080`
+
 Für HelloJexxa können wir beispielsweise `http://localhost:8080/hellojexxa/HelloJexxa/greetings` im Browser eingeben.
