@@ -1,0 +1,17 @@
+- [Story-01] Als Entwickler in der TI möchte ich ein API Gateway mit Dashboard einrichten, um prototypisch den Use Case 1 (API Gateway wird vor unterschiedlichen Kontexten geschaltet) umzusetzen.
+		○ Zwei unterschiedliche Jexxa Tutorials einrichten
+		○ Diese per API Gateway manuell verbinden 
+		○ Zugriff über http://api-gateway/kontext1 bzw. http://api-gateway/kontext2
+
+- [Story-02] Als Entwickler in der TI möchte ich ein API Gateway ohne Dashboard einrichten, um prototypisch den Use Case 1 (API Gateway wird vor unterschiedlichen Kontexten geschaltet) umzusetzen.
+		○ Zwei unterschiedliche Jexxa Tutorials einrichten
+		○ Diese per API Gateway manuell verbinden 
+		○ Zugriff über http://api-gateway/kontext1 bzw. http://api-gateway/kontext2
+	
+- [Story-03] Als STW-Labor Leiterin möchte ich, dass die Einstellungen an den Grenzwerten der AlarmIT-Software nur durch berechtigte Personen möglich ist, um fehlerhafte/falsche Konfigurationen zu vermeiden.
+		○ Alle REST-Calls */GrenzwerteService/* (insbesondere die POST-Kommandos) können nur aufgerufen werden, wenn zuvor ein Authentifizierung stattgefunden hat (z.B. Passwort eingegeben)
+		○ Authentifizierung erfolgt über API Key
+		
+- [Story-04] Als Entwickler in der TI möchte ich dass sich mein Kontext automatisch bei der API Gateway registriert, damit er REST Aufrufe empfangen kann (über den API Gateway)
+		○ Beim registrieren am API Gateway wird nur das Prefix angegeben (bspw. Name des Kontexts)
+Das API Gateway leitet alle Aufrufe mit diesem Präfix automatisch an den Kontext weiter
