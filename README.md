@@ -3,8 +3,9 @@ Dieses Repo dient als Anleitung um beliebige Jexxa Kontexte mit dem Tyk API Gate
 
 Dieses Tutorial gibt es in 2 Versionen:
 
-Open Source
-Dashboard
+[Open Source](https://github.com/paul-priv/jexxa-tyk/blob/main/Anleitungen/OpenSource.md)
+
+[Dashboard](https://github.com/paul-priv/jexxa-tyk/blob/main/Anleitungen/Dashboard.md)
 
 Für die Version mit dem Dashboard benötigt man eine Kostenlose Trial Version von Tyk.
 Für die Open Source Version benutzen wir Postman um unsere Requests zu senden. Stattdessen kann auch curl benutzt werden.
