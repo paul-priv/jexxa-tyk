@@ -1,5 +1,4 @@
 # jexxa-tyk
-Dieses Repo dient als Anleitung um beliebige Jexxa Kontexte mit dem Tyk API Gateway zu verbinden. Es wird vorausgesetzt, dass man Jexxa bereits kennt und weiß, wie man die Tutorials ausführt.
 
 Dieses Tutorial wird mit dem Dashboard gemacht. Hierfür benötigt man eine Kostenlose Trial Version von Tyk.
 
