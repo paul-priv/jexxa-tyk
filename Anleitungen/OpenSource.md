@@ -5,15 +5,20 @@ Dieses Tutorial wird mit der Open Source Version gemacht.
 Wir benutzen für dieses Tutorial den Jexxa Docker Tutorial Stack, sowie die gratis Anwendung [Postman](http://www.postman.com) um unsere Requests zu versenden. 
 
 # Postman herunterladen und einrichten
- 1) [Download](https://www.postman.com/downloads/)
- 2) Wir erstellen eine neue Collection indem wir auf das + drücken. Diese ist wie ein Ordner für unsere Requests.
- ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_Collection.jpg?raw=true)
- 3) Wir erstellen einen neuen Request.
- ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_Request.jpg?raw=true)
- 4) Wir wählen den neuen Request aus und gehen auf "Body". Hier können wir nun unseren Request eingeben.
- ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_Request_Body.jpg?raw=true)
+1) [Download](https://www.postman.com/downloads/)
+2) Wir erstellen eine neue Collection indem wir auf das + drücken. Diese ist wie ein Ordner für unsere Requests.
+  
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_Collection.jpg?raw=true)
  
-# Jexxa starten
+3) Wir erstellen einen neuen Request.
+  
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_Request.jpg?raw=true)
+ 
+4) Wir wählen den neuen Request aus und gehen auf "Body". Hier können wir nun unseren Request eingeben.
+ 
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_Request_Body.jpg?raw=true)
+ 
+ # Jexxa starten
 
 Man kann hierbei die Jexxa Kontexte entweder lokal oder als Docker Container starten. Für dieses Tutorial benutzen wir den [Jexxa Tutorial Docker Stack](https://github.com/repplix/JexxaTutorials/blob/main/deploy/docker-compose.yml). Wir verwenden 2 Kontexte, HelloJexxa und BookStoreJ.
 
@@ -24,12 +29,18 @@ Man kann hierbei die Jexxa Kontexte entweder lokal oder als Docker Container sta
 1) Git Repo klonen: `git clone https://github.com/TykTechnologies/tyk-gateway-docker`
 2) In den neuen Ordner wechseln: `cd tyk-gateway-docker`
 3) Docker Compose ausführen: `docker-compose up -d`
-4) Überprüfen ob der API Gateway läuft, indem wir eine Anfrage an `http://localhost:8080/hello` senden. Die Antwort sollte so aussehen: 
+4) Überprüfen ob der API Gateway läuft, indem wir eine Anfrage an `http://localhost:8080/hello` senden. Die Antwort sollte so aussehen:
+ 
 `{"status":"pass","version":"v3.2.1","description":"Tyk GW","details":{"redis":{"status":"pass","componentType":"datastore","time":"2022-03-24T09:26:08Z"}}}`
+
 Hierzu gibt es 3 Methoden:
-i) Browser öffnen und auf [http://localhost:8080/hello] gehen.
+
+i) Browser öffnen und auf <http://localhost:8080/hello> gehen.
+
 ii) Curl verwenden. Hierzu in der Konsole `curl http://localhost:8080/hello` eingeben.
-iii) Postman verwenden. Wir geben als Request URL `http://localhost:8080/hello` ein. Einen Request Body brauchen wir in diesem Fall nicht. Anschließend drücken wir auf `Send`. Die Antwort sehen wir unten.
+
+iii) Postman verwenden. Wir stellen sicher, dass als Methode `GET` ausgewählt ist und geben als Request URL `http://localhost:8080/hello` ein. Einen Request Body brauchen wir in diesem Fall nicht. Anschließend drücken wir auf `Send`. Die Antwort sehen wir unten.
+
 ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_Gateway_Check.jpg?raw=true)
 
 
