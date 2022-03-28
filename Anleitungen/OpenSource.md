@@ -39,9 +39,66 @@ i) Browser öffnen und auf <http://localhost:8080/hello> gehen.
 
 ii) Curl verwenden. Hierzu in der Konsole `curl http://localhost:8080/hello` eingeben.
 
-iii) Postman verwenden. Wir stellen sicher, dass als Methode `GET` ausgewählt ist und geben als Request URL `http://localhost:8080/hello` ein. Einen Request Body brauchen wir in diesem Fall nicht. Anschließend drücken wir auf `Send`. Die Antwort sehen wir unten.
+iii) Postman verwenden. Diese Methode wird auch für das restliche Tutorial verwendet. Wir stellen sicher, dass als Methode `GET` ausgewählt ist und geben als Request URL `http://localhost:8080/hello` ein. Einen Request Body brauchen wir in diesem Fall nicht. Anschließend drücken wir auf `Send`. Die Antwort sehen wir unten.
 
 ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_Gateway_Check.jpg?raw=true)
 
+5) API Secret `x-tyk-authorization` finden. Dieses befindet sich in `tyk.hybrid.conf` und ist standardmäßig `foo`.
 
+# Erstellen eines APIs
+
+Wir erstellen im Folgenden eine API für HelloJexxa. Die API für BookStoreJ wird analog dazu erstellt.
+Zunächst benötigen wir die lokale IP Adresse. Hierfür geben wir in der Kommandozeile `ipconfig` ein.
+
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Lokale_IP_Adresse_Finden.jpg?raw=true)
+
+Die IPv4 Addresse ist die von unserem Rechner, die wir statt `localhost` bzw. `127.0.0.1` verwenden müssen.
+
+1) API erstellen. Wichtig hierbei ist, dass die Methode auf `POST` gesetzt ist, die Adresse stimmt und die Proxyeinstellungen korrekt konfiguriert sind. `name`, `slug` und `api_id` sollten auch eingetragen werden. Der Port bei den Proxyeinstellungen ist der Port auf dem HelloJexxa im Tutorialstack läuft (7501).
+
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_API.jpg?raw=true)
+
+<details> 
+  <summary> JSON </summary> 
+  
+  ```javascript 
+  {
+    "name": "Hello Jexxa",
+    "slug": "hellojexxa",
+    "api_id": "Hello-Jexxa",
+    "org_id": "1",
+    "use_keyless": true,
+    "auth": {
+      "auth_header_name": "Authorization"
+    },
+    "definition": {
+      "location": "header",
+      "key": "x-api-version"
+    },
+    "version_data": {
+      "not_versioned": true,
+      "versions": {
+        "Default": {
+          "name": "Default",
+          "use_extended_paths": true
+        }
+      }
+    },
+    "proxy": {
+      "listen_path": "/hellojexxa/",
+      "target_url": "http://{LOKALE_IP_ADRESSE}:7501/",
+      "strip_listen_path": true
+    },
+    "active": true
+}
+  ```
+</details> 
+
+2) API Secret hinzufügen. Um ein neues API zu erstellen, muss man sein API Secret mitgeben. Hierzu gehen wir auf `Headers` und fügen unser API Secret hinzu. Falls bereits mehrere Felder angezeigt werden, können diese auch versteckt werden. Anschließend wird auf `Send` gedrückt. Dieses API Secret muss bei jeder Anfrage an das API Gateway hinzugefügt werden, die dieses verändern.
+
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_API_Auth.jpg?raw=true)
+
+3) APIs Aktualisieren. Damit dieses API auch übernommen wird, muss erst aktualisiert werden. Hierzu senden wir eine `GET` Anfrage an `http://localhost:8080/tyk/reload/group`. Hier muss auch das API Secret angegeben werden.
+
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_Refresh_APIs.jpg?raw=true)
 
