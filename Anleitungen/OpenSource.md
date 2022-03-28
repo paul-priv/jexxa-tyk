@@ -102,3 +102,11 @@ Die IPv4 Addresse ist die von unserem Rechner, die wir statt `localhost` bzw. `1
 
 ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_Refresh_APIs.jpg?raw=true)
 
+# Überprüfen des APIs
+
+Wir überprüfen unser API für HelloJexxa. Normalerweise würden wir als Pfad `http://localhost:7501/HelloJexxa/greetings` eingeben. Da wir aber nun über das API Gateway darauf zugreifen wollen benutzen wir nun den Pfad `http://localhost:8080/hellojexxa/HelloJexxa/greetings`. Für eine Erklärung siehe folgendes Bild:
+
+![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_HelloJexxa_Check.jpg?raw=true)
+
+Da wir nichts an dem API Gateway in diesem Schritt verändern, brauchen wir hierfür nicht das API Secret. Durch das drücken auf `Send` sollte nun als Ausgabe `Hello Jexxa` erscheinen.
+
