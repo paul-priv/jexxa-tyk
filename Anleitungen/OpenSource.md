@@ -54,7 +54,7 @@ Zunächst benötigen wir die lokale IP Adresse. Hierfür geben wir in der Komman
 
 Die IPv4 Addresse ist die von unserem Rechner, die wir statt `localhost` bzw. `127.0.0.1` verwenden müssen.
 
-1) API erstellen. Wichtig hierbei ist, dass die Methode auf `POST` gesetzt ist, die Adresse stimmt und die Proxyeinstellungen korrekt konfiguriert sind. `name`, `slug` und `api_id` sollten auch eingetragen werden. Der Port bei den Proxyeinstellungen ist der Port auf dem HelloJexxa im Tutorialstack läuft (7501).
+1) API erstellen. Wichtig hierbei ist, dass die Methode auf `POST` gesetzt ist, die Adresse stimmt und die Proxyeinstellungen korrekt konfiguriert sind (WICHTIG: Lokale IP Adresse dort einfügen). `name`, `slug` und `api_id` sollten auch eingetragen werden. Der Port bei den Proxyeinstellungen ist der Port auf dem HelloJexxa im Tutorialstack läuft (7501). 
 
 ![Bild](https://github.com/paul-priv/jexxa-tyk/blob/main/Screenshots/Postman_New_API.jpg?raw=true)
 
@@ -86,7 +86,7 @@ Die IPv4 Addresse ist die von unserem Rechner, die wir statt `localhost` bzw. `1
     },
     "proxy": {
       "listen_path": "/hellojexxa/",
-      "target_url": "http://{LOKALE_IP_ADRESSE}:7501/",
+      "target_url": "http://{LOKALE IP ADRESSE HIER EINFUEGEN}:7501/",
       "strip_listen_path": true
     },
     "active": true
