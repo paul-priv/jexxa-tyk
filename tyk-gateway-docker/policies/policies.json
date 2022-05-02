@@ -1,17 +1,65 @@
 {
-  "POLICYID": {
+  "HELLOJEXXAAUTHPOLICY": {
     "access_rights": {
-      "1": {
+      "Hello-Jexxa-Auth": {
         "allowed_urls": [],
-        "api_id": "1",
-        "api_name": "Hello Jexxa API",
+        "api_id": "Hello-Jexxa-Auth",
+        "api_name": "Hello Jexxa Auth",
         "versions": [
             "Default"
         ]
       }
     },
     "active": true,
-    "name": "POLICY NAME1",
+    "name": "HELLO JEXXA AUTH POLICY",
+    "rate": 100,
+    "per": 1,
+    "quota_max": 10000,
+    "quota_renewal_rate": 3600,
+    "state": "active",
+    "tags": ["Startup Users"]
+  },
+  "BOOKSTOREJAUTHPOLICY": {
+    "access_rights": {
+      "BookStoreJ-Auth": {
+        "allowed_urls": [],
+        "api_id": "BookStoreJ-Auth",
+        "api_name": "BookStoreJ Auth",
+        "versions": [
+            "Default"
+        ]
+      },
+	  "BookStoreJ16-Auth": {
+        "allowed_urls": [],
+        "api_id": "BookStoreJ16-Auth",
+        "api_name": "BookStoreJ16 Auth",
+        "versions": [
+            "Default"
+        ]
+      }
+    },
+    "active": true,
+    "name": "BOOKSTOREJ AUTH POLICY",
+    "rate": 100,
+    "per": 1,
+    "quota_max": 10000,
+    "quota_renewal_rate": 3600,
+    "state": "active",
+    "tags": ["Startup Users"]
+  },
+  "HELLOJEXXACPWPOLICY": {
+    "access_rights": {
+      "Hello-Jexxa-CPW": {
+        "allowed_urls": [],
+        "api_id": "Hello-Jexxa-CPW",
+        "api_name": "Hello Jexxa Custom Password",
+        "versions": [
+            "Default"
+        ]
+      }
+    },
+    "active": true,
+    "name": "HELLO JEXXA CUSTOM PASSWORD POLICY",
     "rate": 100,
     "per": 1,
     "quota_max": 10000,

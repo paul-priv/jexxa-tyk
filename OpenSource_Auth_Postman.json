@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "ab7beff7-0d80-4ad1-bd61-1456bde9c3df",
+		"name": "README Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1) API Gateway Check",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2) API Erstellen",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tyk-authorization",
+						"value": "foo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Hello Jexxa\",\r\n    \"slug\": \"hellojexxa\",\r\n    \"api_id\": \"Hello-Jexxa\",\r\n    \"org_id\": \"1\",\r\n    \"use_keyless\": false,\r\n    \"auth\": {\r\n      \"auth_header_name\": \"Authorization\"\r\n    },\r\n    \"definition\": {\r\n      \"location\": \"header\",\r\n      \"key\": \"x-api-version\"\r\n    },\r\n    \"version_data\": {\r\n      \"not_versioned\": true,\r\n      \"versions\": {\r\n        \"Default\": {\r\n          \"name\": \"Default\",\r\n          \"use_extended_paths\": true\r\n        }\r\n      }\r\n    },\r\n    \"proxy\": {\r\n      \"listen_path\": \"/hellojexxa/\",\r\n      \"target_url\": \"http://192.168.178.110:7501/\",\r\n      \"strip_listen_path\": true\r\n    },\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tyk/apis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tyk",
+						"apis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3) APIs Aktualisieren",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-tyk-authorization",
+						"value": "foo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tyk/reload/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tyk",
+						"reload",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4) Create Key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tyk-authorization",
+						"value": "foo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"allowance\": 1000,\r\n    \"rate\": 1000,\r\n    \"per\": 1,\r\n    \"expires\": -1,\r\n    \"quota_max\": -1,\r\n    \"org_id\": \"1\",\r\n    \"quota_renews\": 1449051461,\r\n    \"quota_remaining\": -1,\r\n    \"quota_renewal_rate\": 60,\r\n    \"access_rights\": {\r\n      \"Hello-Jexxa\": {\r\n        \"api_id\": \"Hello-Jexxa\",\r\n        \"api_name\": \"Hello Jexxa\",\r\n        \"versions\": [\"Default\"]\r\n      }\r\n    },\r\n    \"meta_data\": {}\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tyk/keys/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tyk",
+						"keys",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1) HelloJexxa Testen Kein Key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hellojexxa/HelloJexxa/greetings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hellojexxa",
+						"HelloJexxa",
+						"greetings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.2) HelloJexxa Testen Falscher Key",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "das ist bestimmt das richtige passwort",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hellojexxa/HelloJexxa/greetings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hellojexxa",
+						"HelloJexxa",
+						"greetings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.3) HelloJexxa Testen Erfolgreich",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "100b397ec8ec34b58a9cbbe570f1d6cd",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hellojexxa/HelloJexxa/greetings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hellojexxa",
+						"HelloJexxa",
+						"greetings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
